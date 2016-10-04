@@ -1,0 +1,15 @@
+body {
+  min-height: 400px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+#navbar ul form {
+	margin: 2px 0px;
+}
+
+.navbar-right {
+	margin-right: 0px;
+}

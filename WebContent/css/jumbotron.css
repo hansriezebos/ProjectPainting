@@ -1,0 +1,53 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+	background-image: url("../images/rsz_background.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.jumbotron .container {
+	color: #e7e7e7;
+	min-height: 250px;
+}
+
+.jumbotron .container h1 {
+	margin-top: 33px;
+}
+
+
+.jumbotron .container p {
+	
+}
+
+.col-md-6-wrapper {
+	margin-left: auto; 
+    margin-right: auto;
+
+     text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+
+.enabled img {
+	vertical-align: center;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.table tbody .table-row td {
+	vertical-align: middle;
+}
+
+.table img {
+	height: 75px;
+	max-width: 300px;
+}
+
+#myCanvas {
+	border: 1px solid #000;
+}
