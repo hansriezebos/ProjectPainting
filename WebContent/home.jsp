@@ -82,7 +82,8 @@
 				</div>
 			</div>
 		</div>
-
+		<br />
+		<br />
 		<hr>
 
 		<footer>
