@@ -50,30 +50,41 @@
 	
 	<div class="container">
   		${message}
-		<table class="table table-striped table-hover">
-		<thead>
-			<tr>
-				<th>Painting ID</th>
-				<th>Painting name</th>
-				<th>Image</th>
-				<th colspan="2">Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% int i = 1; %>
-			<c:forEach items="${paintings}" var="painting">
-				<tr class="table-row">
-					<td><c:out value="<%=i++ %>" /></td>
-					<td><c:out value="${painting.name}" /></td>
-					<td><img src="${painting.imageData}" /></td>
-					<td><a
-						href="PaintingController?action=edit&id=<c:out value="${painting.id}"/>">Update</a></td>
-					<td><a
-						href="PaintingController?action=delete&id=<c:out value="${painting.id}"/>&userId=<%=userId%>" onclick="return confirm('Are you sure you want to delete &ldquo;${painting.name}&rdquo;?');">Delete</a></td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+  		<c:choose>
+  			<c:when test="${fn:length(paintings) == '0'}">
+  				<p>Oh, you haven't create a painting yet. Become the new Picasso by clicking <a href="PaintingController?action=insert">here</a>!</p>
+  			</c:when>
+  			<c:otherwise>
+  				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Painting ID</th>
+							<th>Painting name</th>
+							<th>Image</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% int i = 1; %>
+						<c:forEach items="${paintings}" var="painting">
+							<tr class="table-row">
+								<td><c:out value="<%=i++ %>" /></td>
+								<td><c:out value="${painting.name}" /></td>
+								<td><img src="${painting.imageData}" /></td>
+								<td><a
+									href="PaintingController?action=edit&id=<c:out value="${painting.id}"/>">Edit</a></td>
+								<td><a
+									href="PaintingController?action=delete&id=<c:out value="${painting.id}"/>&userId=<%=userId%>" onclick="return confirm('Are you sure you want to delete &ldquo;${painting.name}&rdquo;?');">Delete</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+  			</c:otherwise>
+  		
+  		
+  		</c:choose>
+		
+	
 		<hr>
 
 		<footer>

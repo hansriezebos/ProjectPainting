@@ -102,7 +102,6 @@ public class Validate {
 			System.out.println("Fetching records with condition...");
 			
 			String sql = "INSERT INTO users (name, password, email, datetime) VALUES ('" + inputName + "', '" + inputPassword + "', '" + inputEmail + "', '0000-00-00')";
-			System.out.println(sql);
 			stmt.executeUpdate(sql);
 			
 			newUser = new User(0, inputName, inputPassword, inputEmail);

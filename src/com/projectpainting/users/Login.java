@@ -25,8 +25,8 @@ public class Login extends HttpServlet {
 			// cookies aanmaken
 			Cookie loginId = new Cookie("id", String.valueOf(user.getId()));
 			Cookie loginName = new Cookie("name", user.getName());
-			loginId.setMaxAge(60*60);
-			loginName.setMaxAge(60*60);
+			loginId.setMaxAge(60*60*24);
+			loginName.setMaxAge(60*60*24);
 			response.addCookie(loginId);
 			response.addCookie(loginName);
 			response.sendRedirect("PaintingController?action=home");

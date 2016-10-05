@@ -33,7 +33,7 @@ public class Register extends HttpServlet {
 			loginName.setMaxAge(60*60);
 			response.addCookie(loginId);
 			response.addCookie(loginName);
-			response.sendRedirect("home.jsp");
+			response.sendRedirect("PaintingController?action=home");
 		} else {
 			msg = "<span>Password does not match.</span>";
 			request.setAttribute("messageRegister", msg);

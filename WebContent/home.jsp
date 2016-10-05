@@ -86,7 +86,7 @@
 		<hr>
 
 		<footer>
-		<p>&copy; 2016 Marc de Vries</p>
+			<p>&copy; 2016 Marc de Vries</p>
 		</footer>
 	</div>	<!-- /container -->
 
